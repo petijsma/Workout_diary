@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workout diary</title>
+    <link rel="stylesheet" href="{% static 'workouts/diary.css' %}">
+</head>
+
+<body>
+    <h1><a href="/">MY WORKOUT DIARY</a></h1>
+
+    {% block content %}{% endblock %}
+
+</body>
+
+</html>

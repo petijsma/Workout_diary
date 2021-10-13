@@ -1,9 +1,9 @@
-from django.urls import path
-
-from . import views
+from django.contrib import admin
+from django.urls import include, path
 
 urlpatterns = [
-    path("", views.WorkoutListView.as_view(), name="workout-list"),
-    path("<int:pk>", views.WorkoutDetailView.as_view(), name="workout-detail"),
-    path("contact", views.contact, name="contact"),
+    
+    path("admin/", admin.site.urls),
+    path("", include("workout_diary.urls")),
+    
 ]

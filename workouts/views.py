@@ -28,6 +28,6 @@ def contact(request):
             ['petijsma@gmail.com'] # to
         )
 
-        return render(request, 'workout_diary/contact.html', {'message_name': message_name})
+        return render(request, 'workouts/contact.html', {'message_name': message_name})
     else:
-        return render(request, 'workout_diary/contact.html', {})
+        return render(request, 'workouts/contact.html', {})

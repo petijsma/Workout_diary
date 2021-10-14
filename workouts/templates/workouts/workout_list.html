@@ -12,6 +12,11 @@
         <a href="{% url 'contact' %}"> Would you like to leave a message?</a>
         </p>
         <br>
+    
+        <article>
+            <h2 class="mark">{% now "Y-m-d H:i" %}</em></h2>
+            <a href="{% url 'workout-create' %}"><button>Add new entry</button></a>
+        </article>
         
         {% for workout in workout_list %}
             <article>

@@ -14,6 +14,10 @@
             <h3>{{ workout.title }}</h3>
             <p>{{ workout.content }}</p>
         </article>
+        <p>
+            <a href="{% url 'workout-update' workout.id %}">✍️ Edit</a>
+            <a href="{% url 'workout-delete' workout.id %}">⛔ Delete</a>
+        </p>
     {% endblock %}
 </body>
 </html>

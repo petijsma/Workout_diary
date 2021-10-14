@@ -1,0 +1,14 @@
+{% extends "workouts/base.html" %}
+{% block content %}
+    <form method="post">{% csrf_token %}
+        <p>
+            Are you sure you want to delete?
+            <em>"{{ workout.title }}"</em>
+            created on {{ workout.date_of_workout|date:'d.m.Y' }}?
+        </p>
+        <input type="submit" value="Confirm">
+    </form>
+    <a href="{% url 'workout-detail' workout.id %}">
+        <button>Cancel</button>
+    </a>
+{% endblock %}
